@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snapify</title>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script type="module" src="js/controller.js"></script>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button
+        class="icon-btn"
+        aria-label="Open menu"
+        data-ripple
+        data-nav-toggler
+      >
+        <i class="ph-bold ph-list" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+
+      <a href="/" class="logo">Snapify</a>
+
+      <div class="search-view">
+        <div class="search-bar">
+          <button
+            class="icon-btn"
+            aria-label="Close search"
+            data-ripple
+            data-search-toggler
+          >
+            <i class="ph-bold ph-arrow-left" aria-hidden="true"></i>
+            <div class="state-layer"></div>
+          </button>
+
+          <form class="input-wrapper">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search..."
+              autocomplete="off"
+              class="input-field body-large"
+              data-search-field
+            />
+          </form>
+
+          <button
+            class="icon-btn"
+            aria-label="Clear search"
+            data-ripple
+            data-search-clear-btn
+          >
+            <i class="ph-bold ph-x" aria-hidden="true"></i>
+            <div class="state-layer"></div>
+          </button>
+
+          <button
+            class="icon-btn search-btn"
+            aria-label="Submit search"
+            data-search-toggler
+            data-search-btn
+            data-ripple
+          >
+            <i class="ph-bold ph-magnifying-glass" aria-hidden="true"></i>
+            <div class="state-layer"></div>
+          </button>
+
+          <div class="state-layer"></div>
+        </div>
+
+        <div class="search-view-content">
+          <div class="btn-group" data-option="search">
+            <button
+              class="seach-option selected"
+              aria-label="Photo option"
+              data-option-btn
+              data-option-value="photos"
+              data-ripple
+            >
+              <i class="ph ph-image" aria-hidden="true"></i>
+
+              <span class="label-large text">Photos</span>
+
+              <div class="state-layer"></div>
+            </button>
+
+            <button
+              class="seach-option"
+              aria-label="Video option"
+              data-option-btn
+              data-option-value="videos"
+              data-ripple
+            >
+              <i class="ph ph-video-camera" aria-hidden="true"></i>
+
+              <span class="label-large text">Videos</span>
+
+              <div class="state-layer"></div>
+            </button>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="search-list"></div>
+        </div>
+      </div>
+
+      <button
+        class="icon-btn search-open"
+        aria-label="Open search"
+        data-search-toggler
+        data-ripple
+      >
+        <i class="ph-bold ph-magnifying-glass" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+
+      <button
+        class="icon-btn theme-btn"
+        aria-label="Switch theme"
+        data-theme-toggler
+        data-ripple
+      >
+        <i class="ph-bold ph-moon dark-icon" aria-hidden="true"></i>
+
+        <i class="ph-bold ph-sun light-icon" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+    </header>
+  </body>
+</html>
