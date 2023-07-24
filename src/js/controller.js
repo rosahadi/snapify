@@ -5,6 +5,7 @@ import 'core-js/stable';
 import { ripple } from './utils/ripple';
 import themeManager from './view/theme.js';
 import searchController from './view/search.js';
+import { addEventOnElements } from './utils/event';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Instantiate the ThemeManager
@@ -23,3 +24,13 @@ window.addEventListener('scroll', function () {
 // Add ripple effect to elements with the 'data-ripple' attribute
 const rippleElems = document.querySelectorAll('[data-ripple]');
 rippleElems.forEach(rippleElem => ripple(rippleElem));
+
+// Navbar toggle
+const navbar = document.querySelector('.navigation');
+const navbarTogglers = document.querySelectorAll('[data-nav-toggler]');
+const overlay = document.querySelector('.overlay');
+
+addEventOnElements(navbarTogglers, 'click', function () {
+  navbar.classList.toggle('show');
+  overlay.classList.toggle('active');
+});
