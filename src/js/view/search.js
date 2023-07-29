@@ -19,7 +19,7 @@ class SearchController {
       '[data-option-btn].selected'
     );
     this.searchBtn = document.querySelector('[data-search-btn]');
-    this.searchList = document.querySelector('.search-list');
+    this.searchList = document.querySelector('.list');
 
     this.searchType = this.activeOptionBtn.dataset.optionValue;
 
@@ -81,7 +81,7 @@ class SearchController {
 
     historyItems.forEach(historyItem => {
       const searchItem = document.createElement('button');
-      searchItem.classList.add('search-item');
+      searchItem.classList.add('list-item');
 
       searchItem.innerHTML = `
         <i class="ph ph-clock-counter-clockwise leading-icon"></i>

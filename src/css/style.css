@@ -237,10 +237,11 @@ body {
   /* opacity: 0; */
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 img {
-  width: 100%;
+  height: 100%;
 }
 
 li {
@@ -387,6 +388,10 @@ button:disabled {
   font-size: 2.2rem;
 }
 
+.ph-fill {
+  font-size: 2.2rem;
+}
+
 .ph {
   font-size: 1.8rem;
 }
@@ -421,6 +426,9 @@ button:disabled {
 }
 
 .ripple {
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   border-radius: var(--radius-circle);
   opacity: 0.12;
   animation: ripple 800ms var(--motion-easing-standard);
@@ -439,6 +447,96 @@ button:disabled {
   height: 1px;
   max-width: 100%;
   background-color: var(--outline-variant);
+}
+
+.section {
+  position: relative;
+  margin-block-end: 2.4rem;
+}
+
+.container {
+  padding-inline: 1.6rem;
+}
+
+.section-title {
+  margin-block-end: 1.2rem;
+}
+
+.media-grid {
+  --column-count: 2;
+  --column-gap: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+  gap: var(--column-gap);
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--column-gap);
+  align-self: flex-start;
+}
+
+.featured-photos .column,
+.popular-video .column {
+  margin-bottom: -80rem;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-btn {
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  padding-block: 4.8rem 2.4rem;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--background) 100%
+  );
+  z-index: 1;
+}
+
+.skeleton {
+  background-color: var(--surface-container-highest);
+  border-radius: var(--radius-medium);
+  aspect-ratio: 2/3;
+  animation: skeleton-loading 1000ms linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card-badge {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-secondary-container);
+  color: var(--light-on-secondary-container);
+  border-radius: var(--radius-small);
+}
+
+.card-badge .ph-play {
+  font-size: 1.8rem;
+  margin-right: 2px;
 }
 
 /* ICON BUTTON */
@@ -635,11 +733,11 @@ button:disabled {
 
 /* SEARCH LIST */
 
-.search-list {
+.list {
   padding-block: 0.8rem;
 }
 
-.search-item {
+.list-item {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -650,22 +748,28 @@ button:disabled {
   --state-layer-bg: var(--on-surface);
 }
 
-.search-item .text {
+.list-item .text {
   color: var(--on-surface);
 }
 
-.search-item .leading-icon {
+.list-item .leading-icon {
   color: var(--on-surface);
 }
 
-.search-item.two-line .body-large {
+.list-item.two-line {
+  justify-content: space-between;
+  padding-inline-end: 1.2rem;
+  height: 7.2rem;
+}
+
+.list-item.two-line .body-large {
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.search-item.two-line > .state-layer {
+.list-item.two-line > .state-layer {
   pointer-events: all;
 }
 
@@ -687,8 +791,10 @@ button:disabled {
   transition-property: width, visbility;
   border-radius: var(--radius-large-end);
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Set up a grid with three rows */
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
 }
 
 .navigation.show {
@@ -739,10 +845,6 @@ button:disabled {
   background-color: var(--secondary-container);
   color: var(--on-secondary-container);
   --state-layer-bg: var(--on-secondary-container);
-}
-
-.navigation-content {
-  overflow-y: auto;
 }
 
 .navigation.show .legal {
@@ -968,4 +1070,56 @@ button:disabled {
   background-color: var(--tertiary);
   color: var(--on-tertiary);
   --state-layer-bg: var(--on-tertiary);
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  transition: box-shadow var(--motion-duration-short-2)
+    var(--motion-easing-linear);
+  --state-layer-bg: var(--on-surface);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--elevation-1);
+}
+
+.card > .state-layer {
+  pointer-events: all;
+}
+
+.card .card-banner {
+  aspect-ratio: var(--width) / var(--height);
+}
+
+.card .card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  background-image: linear-gradient(180deg, transparent, hsla(0, 0%, 0%, 0.75));
+  pointer-events: none;
+  padding: 0.5rem;
+}
+
+.card .icon-btn {
+  pointer-events: all;
+  margin-inline-start: auto;
+  color: var(--light-inverse-on-surface);
+  --state-layer-bg: var(--light-inverse-on-surface);
+}
+
+.card .icon-btn.active {
+  color: var(--light-inverse-primary);
+  --state-layer-bg: var(--light-inverse-primary);
+}
+
+.card.video {
+  background-color: var(--surface-container-highest);
 }

@@ -34,3 +34,13 @@ addEventOnElements(navbarTogglers, 'click', function () {
   navbar.classList.toggle('show');
   overlay.classList.toggle('active');
 });
+
+// Initial favorite object in local storage
+if (!window.localStorage.getItem('favorite')) {
+  const favoriteObj = {
+    photos: {},
+    videos: {},
+  };
+
+  window.localStorage.setItem('favorite', JSON.stringify(favoriteObj));
+}

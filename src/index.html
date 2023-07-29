@@ -16,6 +16,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script type="module" src="js/controller.js"></script>
+    <script type="module" src="js/homepage-controller.js"></script>
 
     <!-- custom css link -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -115,7 +116,7 @@
 
           <div class="divider"></div>
 
-          <div class="search-list"></div>
+          <div class="list"></div>
         </div>
       </div>
 
@@ -535,6 +536,78 @@
                 </video>
               </div>
             </div>
+          </div>
+        </section>
+
+        <!-- PHOTOS -->
+        <section
+          class="section featured-photos"
+          aria-labelledby="featured-label"
+        >
+          <div class="container">
+            <h2 class="title-large section-title" id="featured-label">
+              Photos
+            </h2>
+
+            <div class="media-grid" data-photo-grid></div>
+
+            <div class="overlay-btn">
+              <a
+                href="./pages/photos/photos.html"
+                class="btn btn-primary"
+                data-ripple
+              >
+                <span class="label-large text">Explore more</span>
+
+                <div class="state-layer"></div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIDEOS -->
+        <section
+          class="section popular-video"
+          aria-labelledby="popular-video-label"
+        >
+          <div class="container">
+            <h2 class="title-large section-title" id="popular-video-label">
+              Vidoes
+            </h2>
+            <div class="media-grid" data-video-grid></div>
+
+            <div class="overlay-btn">
+              <a
+                href="./pages/videos/videos.html"
+                class="btn btn-primary"
+                data-ripple
+              >
+                <span class="label-large text">Explore more</span>
+
+                <div class="state-layer"></div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!--  COLLECTION -->
+        <section class="section collection" aria-labelledby="collection-label">
+          <div class="container">
+            <h2 class="title-large section-title" id="collection-label">
+              Collections
+            </h2>
+
+            <div class="collection-grid" data-collection-grid></div>
+
+            <a
+              href="./pages/collections/collection.html"
+              class="btn btn-primary"
+              data-ripple
+            >
+              <span class="label-large text">More collections</span>
+
+              <div class="state-layer"></div>
+            </a>
           </div>
         </section>
       </article>
