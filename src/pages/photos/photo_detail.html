@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curated photos - Snapify</title>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script type="module" src="./photo_detail.js"></script>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body class="detail">
+    <!-- HEADER -->
+    <header class="header">
+      <button
+        class="icon-btn"
+        onclick="window.history.back()"
+        aria-label="Back to previous page"
+        data-ripple
+      >
+        <i class="ph-bold ph-arrow-left" aria-hidden="true"></i>
+
+        <div class="state-layer"></div>
+      </button>
+
+      <a href="/" class="logo">Snapify</a>
+
+      <div class="menu-wrapper" data-menu-wrapper>
+        <div class="split-btn">
+          <a href="" class="label" download data-download-link data-ripple>
+            <span class="label-large">Download</span>
+
+            <div class="state-layer"></div>
+          </a>
+
+          <button class="trailing-icon" data-menu-toggler data-ripple>
+            <i class="ph-fill ph-caret-down" aria-hidden="true"></i>
+
+            <div class="state-layer"></div>
+          </button>
+        </div>
+
+        <div class="menu" data-menu data-download-menu></div>
+      </div>
+
+      <button
+        class="icon-btn"
+        aria-label="add to favorite"
+        data-ripple
+        data-add-favorite
+      >
+        <i
+          class="ph-bold ph-heart-straight leading-icon"
+          aria-hidden="true"
+        ></i>
+
+        <div class="state-layer"></div>
+      </button>
+
+      <button
+        class="icon-btn theme-btn"
+        aria-label="Switch theme"
+        data-theme-toggler
+        data-ripple
+      >
+        <i class="ph-bold ph-moon dark-icon" aria-hidden="true"></i>
+
+        <i class="ph-bold ph-sun light-icon" aria-hidden="true"></i>
+
+        <div class="state-layer"></div>
+      </button>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <article class="container">
+        <div class="detail-wrapper" data-detail-wrapper></div>
+
+        <h2 class="title-large">More like this</h2>
+
+        <div class="media-grid" data-photo-grid></div>
+
+        <div class="load-more" role="progressbar" data-loader></div>
+      </article>
+    </main>
+  </body>
+</html>
