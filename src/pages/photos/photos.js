@@ -3,7 +3,6 @@
 import pexelClient from '../../js/model/api-configure.js';
 import { gridInit, updateGrid } from '../../js/utils/masonry_grid.js';
 import { photoCard } from '../../js/view/photo_card.js';
-import { updateURL } from '../../js/utils/updateURL.js';
 import { urlDecode } from '../../js/utils/urlDecode.js';
 
 const $photoGrid = document.querySelector('[data-photo-grid]');
