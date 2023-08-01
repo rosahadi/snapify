@@ -23,8 +23,8 @@ class SearchController {
 
     this.searchType = this.activeOptionBtn.dataset.optionValue;
 
-    // this.addEventListeners();
     this.renderSearchList();
+    this.setSearchFieldFromURL();
   }
 
   addEventListeners() {
@@ -97,8 +97,10 @@ class SearchController {
 
       this.searchList.appendChild(searchItem);
     });
+  }
 
-    // Use urlDecode to get the search query from the URL and set it in the search field
+  // Function to set the search field from the URL
+  setSearchFieldFromURL() {
     const search = urlDecode(window.location.search.slice(1));
     if (search.query) {
       this.searchField.value = search.query;

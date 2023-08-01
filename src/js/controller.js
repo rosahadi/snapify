@@ -6,8 +6,16 @@ import { ripple } from './utils/ripple';
 import themeManager from './view/theme.js';
 import searchController from './view/search.js';
 import { addEventOnElements } from './utils/event';
+import { urlDecode } from './utils/urlDecode';
 
-window.addEventListener('DOMContentLoaded', () => {
+//Page transition
+window.addEventListener('loadstart', function () {
+  document.body.style.opacity = '0';
+});
+
+window.addEventListener('DOMContentLoaded', function () {
+  document.body.style.opacity = '1';
+
   // Instantiate the ThemeManager
   themeManager.addEventListeners();
 

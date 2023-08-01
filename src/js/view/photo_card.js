@@ -61,7 +61,7 @@ export const photoCard = function (photo) {
                          </button>
                        </div>
   
-                       <a href="${root}/pages/photos/photos.html?id=${id}" class="state-layer"></a>`;
+                       <a href="${root}/pages/photos/photo_detail.html?id=${id}" class="state-layer"></a>`;
 
   const cardBanner = card.querySelector('img');
 

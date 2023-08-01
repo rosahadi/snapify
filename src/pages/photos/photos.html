@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snapify</title>
+    <title>Curated photos - Snapify</title>
 
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script type="module" src="../../js/controller.js"></script>
+    <script type="module" src="./photos.js"></script>
 
     <!-- custom css link -->
     <link rel="stylesheet" href="../../css/style.css" />
@@ -232,8 +233,12 @@
 
     <!-- MAIN -->
     <main class="main">
-      <article class="article">
+      <article class="container">
         <h2 class="page-title title-large" data-title>Photos</h2>
+
+        <div class="media-grid" data-photo-grid></div>
+
+        <div class="load-more" data-loader role="progressbar"></div>
       </article>
     </main>
   </body>
