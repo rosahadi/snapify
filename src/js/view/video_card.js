@@ -52,7 +52,7 @@ export const videoCard = function (video) {
                         >
                           <i
                             class="${
-                              favoriteObj.photos[id] ? 'ph-fill' : 'ph-bold'
+                              favoriteObj.videos[id] ? 'ph-fill' : 'ph-bold'
                             } ph-heart-straight leading-icon"
                             aria-hidden="true"
                           ></i>
