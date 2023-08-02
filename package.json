@@ -8,8 +8,8 @@
     "main": false
   },
   "scripts": {
-    "start": "parcel src/index.html --public-url /",
-    "build": "parcel build src/index.html --dist-dir ./dist --public-url /"
+    "start": "parcel src/index.html src/pages/**/*_detail.html --public-url /",
+    "build": "parcel build src/index.html src/pages/**/*.html --dist-dir ./dist --public-url /"
   },
   "author": "",
   "license": "ISC",

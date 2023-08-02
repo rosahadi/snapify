@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured collections - Snapify</title>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script type="module" src="../../js/controller.js"></script>
+    <script type="module" src="./collection.js"></script>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <button
+        class="icon-btn"
+        aria-label="Open menu"
+        data-ripple
+        data-nav-toggler
+      >
+        <i class="ph-bold ph-list" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+
+      <a href="/" class="logo">Snapify</a>
+
+      <div class="search-view">
+        <div class="search-bar">
+          <button
+            class="icon-btn"
+            aria-label="Close search"
+            data-ripple
+            data-search-toggler
+          >
+            <i class="ph-bold ph-arrow-left" aria-hidden="true"></i>
+            <div class="state-layer"></div>
+          </button>
+
+          <form class="input-wrapper">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search..."
+              autocomplete="off"
+              class="input-field body-large"
+              data-search-field
+            />
+          </form>
+
+          <button
+            class="icon-btn"
+            aria-label="Clear search"
+            data-ripple
+            data-search-clear-btn
+          >
+            <i class="ph-bold ph-x" aria-hidden="true"></i>
+            <div class="state-layer"></div>
+          </button>
+
+          <button
+            class="icon-btn search-btn"
+            aria-label="Submit search"
+            data-search-toggler
+            data-search-btn
+            data-ripple
+          >
+            <i class="ph-bold ph-magnifying-glass" aria-hidden="true"></i>
+            <div class="state-layer"></div>
+          </button>
+
+          <div class="state-layer"></div>
+        </div>
+
+        <div class="search-view-content">
+          <div class="btn-group" data-option="search">
+            <button
+              class="seach-option selected"
+              aria-label="Photo option"
+              data-option-btn
+              data-option-value="photos"
+              data-ripple
+            >
+              <i class="ph ph-image" aria-hidden="true"></i>
+
+              <span class="label-large text">Photos</span>
+
+              <div class="state-layer"></div>
+            </button>
+
+            <button
+              class="seach-option"
+              aria-label="Video option"
+              data-option-btn
+              data-option-value="videos"
+              data-ripple
+            >
+              <i class="ph ph-video-camera" aria-hidden="true"></i>
+
+              <span class="label-large text">Videos</span>
+
+              <div class="state-layer"></div>
+            </button>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="list"></div>
+        </div>
+      </div>
+
+      <button
+        class="icon-btn search-open"
+        aria-label="Open search"
+        data-search-toggler
+        data-ripple
+      >
+        <i class="ph-bold ph-magnifying-glass" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+
+      <button
+        class="icon-btn theme-btn"
+        aria-label="Switch theme"
+        data-theme-toggler
+        data-ripple
+      >
+        <i class="ph-bold ph-moon dark-icon" aria-hidden="true"></i>
+
+        <i class="ph-bold ph-sun light-icon" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+      <div class="navigation-header">
+        <button
+          class="icon-btn"
+          aria-label="Close menu"
+          data-ripple
+          data-nav-toggler
+        >
+          <i class="ph-bold ph-arrow-left" aria-hidden="true"></i>
+          <div class="state-layer"></div>
+        </button>
+
+        <a href="/" class="logo">Snapify</a>
+      </div>
+
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a href="/" class="navigation-link">
+            <i class="ph-bold ph-house leading-icon" aria-hidden="true"></i>
+
+            <span class="label-large">Home</span>
+
+            <div class="state-layer"></div>
+          </a>
+        </li>
+
+        <li class="navigation-item">
+          <a href="../photos/photos.html" class="navigation-link">
+            <i class="ph-bold ph-image leading-icon" aria-hidden="true"></i>
+
+            <span class="label-large">Photos</span>
+
+            <div class="state-layer"></div>
+          </a>
+        </li>
+
+        <li class="navigation-item">
+          <a href="../videos/videos.html" class="navigation-link">
+            <i
+              class="ph-bold ph-video-camera leading-icon"
+              aria-hidden="true"
+            ></i>
+
+            <span class="label-large">Videos</span>
+
+            <div class="state-layer"></div>
+          </a>
+        </li>
+
+        <li class="navigation-item">
+          <a href="./collection.html" class="navigation-link">
+            <i class="ph-bold ph-layout leading-icon" aria-hidden="true"></i>
+
+            <span class="label-large">Collections</span>
+
+            <div class="state-layer"></div>
+          </a>
+        </li>
+
+        <li class="navigation-item">
+          <a href="../favorites/favorite.html" class="navigation-link">
+            <i
+              class="ph-bold ph-heart-straight leading-icon"
+              aria-hidden="true"
+            ></i>
+
+            <span class="label-large">Favorite</span>
+
+            <div class="state-layer"></div>
+          </a>
+        </li>
+      </ul>
+
+      <div class="legal text body-small">
+        <span> &copy; 2023 by snapify. All rights reserved.</span>
+        <span>
+          All Photos and Videos provided by
+          <a href="https://pexels.com" target="_blank" class="color-primary">
+            Pexels.</a
+          >
+        </span>
+      </div>
+    </nav>
+
+    <!-- OVERLAY -->
+    <div class="overlay" data-nav-toggler></div>
+
+    <!-- MAIN -->
+    <main class="main">
+      <article class="container">
+        <h2 class="page-title title-large" data-title>Featured collections</h2>
+
+        <div class="collection-grid" data-collection-grid></div>
+
+        <div class="load-more" data-loader role="progressbar"></div>
+      </article>
+    </main>
+  </body>
+</html>
