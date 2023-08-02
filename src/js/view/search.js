@@ -6,7 +6,7 @@ import { updateSearchHistory } from '../utils/search_history.js';
 import { getSearchHistory } from '../utils/search_history.js';
 import { updateURL } from '../utils/updateURL.js';
 import { urlDecode } from '../utils/urlDecode.js';
-import { option } from './search_option.js';
+import { option } from './btn_option.js';
 
 class SearchController {
   constructor() {

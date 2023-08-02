@@ -747,7 +747,7 @@ button:disabled {
   --state-layer-bg: var(--on-surface);
 }
 
-.seach-option {
+.btn-option {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -757,15 +757,15 @@ button:disabled {
   padding-inline: 1.2rem;
 }
 
-.seach-option:last-of-type {
+.btn-option:last-of-type {
   gap: 1rem;
 }
 
-.seach-option:not(:last-of-type) {
+.btn-option:not(:last-of-type) {
   border-inline-end: 1px solid var(--outline);
 }
 
-.seach-option.selected {
+.btn-option.selected {
   background-color: var(--tertiary-container);
   color: var(--on-tertiary-container);
   --state-layer-bg: var(--on-tertiary-container);
@@ -1292,4 +1292,10 @@ button:disabled {
 
 .detail .title-large {
   margin-block: 3.2rem 1.6rem;
+}
+
+/* FAVORITE PAGE */
+
+.favorite-page .btn-group {
+  margin-block: 16px;
 }
