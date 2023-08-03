@@ -1,5 +1,7 @@
 'use strict';
 
+import 'core-js/stable';
+
 import pexelClient from './model/api-configure';
 import { photoCard } from './view/photo_card.js';
 import { gridInit } from './utils/masonry_grid.js';

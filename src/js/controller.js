@@ -2,11 +2,10 @@
 
 import 'core-js/stable';
 
-import { ripple } from './utils/ripple';
+import { ripple } from './utils/ripple.js';
 import themeManager from './view/theme.js';
 import searchController from './view/search.js';
-import { addEventOnElements } from './utils/event';
-import { urlDecode } from './utils/urlDecode';
+import { addEventOnElements } from './utils/event.js';
 
 //Page transition
 window.addEventListener('loadstart', function () {

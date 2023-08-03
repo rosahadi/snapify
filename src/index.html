@@ -18,6 +18,7 @@
 
     <script type="module" src="js/controller.js"></script>
     <script type="module" src="js/homepage-controller.js"></script>
+    <script type="module" src="js/view/scroll_banners.js"></script>
 
     <!-- custom css link -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -237,306 +238,315 @@
       <article>
         <!-- BANNER -->
         <section class="banner" aria-label="Banner">
-          <!-- PRIMARY CARD -->
-          <div class="banner-card primary">
-            <div class="card-content">
-              <h3 class="headline-medium card-title">
-                Free High-Quality Stock Photos
-              </h3>
+          <div class="scroll-container">
+            <!-- PRIMARY CARD -->
+            <div class="banner-card primary">
+              <div class="card-content">
+                <h3 class="headline-medium card-title">
+                  Free High-Quality Stock Photos
+                </h3>
 
-              <p class="body-large card-text">
-                Discover our outstanding selection of high-quality stock photos.
-              </p>
+                <p class="body-large card-text">
+                  Discover our outstanding selection of high-quality stock
+                  photos.
+                </p>
 
-              <a
-                href="./pages/photos/photos.html"
-                class="btn btn-primary"
-                data-ripple
-              >
-                <span class="label-large text">Explore Now</span>
+                <a
+                  href="./pages/photos/photos.html"
+                  class="btn btn-primary"
+                  data-ripple
+                >
+                  <span class="label-large text">Explore Now</span>
 
-                <div class="state-layer"></div>
-              </a>
+                  <div class="state-layer"></div>
+                </a>
+              </div>
+
+              <div class="card-grid">
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b1;
+                    background-image: url(./assets/images/photo-banner-1.jpg);
+                  "
+                ></div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b2;
+                    background-image: url(./assets/images/photo-banner-2.jpg);
+                  "
+                ></div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b3;
+                    background-image: url(./assets/images/photo-banner-3.jpg);
+                  "
+                ></div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b4;
+                    background-image: url(./assets/images/photo-banner-4.jpg);
+                  "
+                ></div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b5;
+                    background-image: url(./assets/images/photo-banner-5.jpg);
+                  "
+                ></div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b6;
+                    background-image: url(./assets/images/photo-banner-6.jpg);
+                  "
+                ></div>
+              </div>
             </div>
 
-            <div class="card-grid">
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b1;
-                  background-image: url(./assets/images/photo-banner-1.jpg);
-                "
-              ></div>
+            <!-- SECONDARY CARD -->
+            <div class="banner-card secondary">
+              <div class="card-content">
+                <h3 class="headline-medium card-title">
+                  Explore our top-rated stock Videos.
+                </h3>
 
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b2;
-                  background-image: url(./assets/images/photo-banner-2.jpg);
-                "
-              ></div>
+                <p class="body-large card-text">
+                  Discover the captivating and inspiring videos carefully
+                  curated in our selection.
+                </p>
 
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b3;
-                  background-image: url(./assets/images/photo-banner-3.jpg);
-                "
-              ></div>
+                <a
+                  href="./pages/videos/videos.html"
+                  class="btn btn-secondary"
+                  data-ripple
+                >
+                  <span class="label-large text">Explore Now</span>
 
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b4;
-                  background-image: url(./assets/images/photo-banner-4.jpg);
-                "
-              ></div>
+                  <div class="state-layer"></div>
+                </a>
+              </div>
 
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b5;
-                  background-image: url(./assets/images/photo-banner-5.jpg);
-                "
-              ></div>
+              <div class="card-grid">
+                <div class="card-banner" style="grid-area: b1">
+                  <video
+                    class="video"
+                    width="360"
+                    height="420"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/video-banner-1.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
 
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b6;
-                  background-image: url(./assets/images/photo-banner-6.jpg);
-                "
-              ></div>
+                <div class="card-banner" style="grid-area: b2">
+                  <video
+                    class="video"
+                    width="360"
+                    height="640"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/video-banner-2.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <div class="card-banner" style="grid-area: b3">
+                  <video
+                    class="video"
+                    width="480"
+                    height="360"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/video-banner-3.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <div class="card-banner" style="grid-area: b4">
+                  <video
+                    class="video"
+                    width="360"
+                    height="640"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/video-banner-4.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <div class="card-banner" style="grid-area: b5">
+                  <video
+                    class="video"
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/video-banner-5.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <div class="card-banner" style="grid-area: b6">
+                  <video
+                    class="video"
+                    width="480"
+                    height="360"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/video-banner-6.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <!-- TERTIARY CARD -->
+            <div class="banner-card tertiary">
+              <div class="card-content">
+                <h3 class="headline-medium card-title">
+                  Premium media, top collections!
+                </h3>
+
+                <p class="body-large card-text">
+                  Uncover captivating visuals: stunning images, captivating
+                  videos.
+                </p>
+
+                <a
+                  href="./pages/collections/collection.html"
+                  class="btn btn-tertiary"
+                  data-ripple
+                >
+                  <span class="label-large text">Explore Now</span>
+
+                  <div class="state-layer"></div>
+                </a>
+              </div>
+
+              <div class="card-grid">
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b1;
+                    background-image: url(./assets/images/collection-banner-1.jpg);
+                  "
+                ></div>
+
+                <div class="card-banner" style="grid-area: b2">
+                  <video
+                    class="video"
+                    width="360"
+                    height="420"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/collection-banner-2.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b3;
+                    background-image: url(./assets/images/collection-banner-3.jpg);
+                  "
+                ></div>
+
+                <div
+                  class="card-banner"
+                  style="
+                    grid-area: b4;
+                    background-image: url(./assets/images/collection-banner-4.jpg);
+                  "
+                ></div>
+
+                <div class="card-banner" style="grid-area: b5">
+                  <video
+                    class="video"
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/collection-banner-5.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <div class="card-banner" style="grid-area: b6">
+                  <video
+                    class="video"
+                    width="640"
+                    height="338"
+                    loading="lazy"
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source
+                      src="./assets/videos/collection-banner-6.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- SECONDARY CARD -->
-          <div class="banner-card secondary">
-            <div class="card-content">
-              <h3 class="headline-medium card-title">
-                Explore our top-rated stock Videos.
-              </h3>
-
-              <p class="body-large card-text">
-                Discover the captivating and inspiring videos carefully curated
-                in our selection.
-              </p>
-
-              <a
-                href="./pages/photos/photos.html"
-                class="btn btn-secondary"
-                data-ripple
-              >
-                <span class="label-large text">Explore Now</span>
-
-                <div class="state-layer"></div>
-              </a>
-            </div>
-
-            <div class="card-grid">
-              <div class="card-banner" style="grid-area: b1">
-                <video
-                  class="video"
-                  width="360"
-                  height="420"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/video-banner-1.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="card-banner" style="grid-area: b2">
-                <video
-                  class="video"
-                  width="360"
-                  height="640"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/video-banner-2.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="card-banner" style="grid-area: b3">
-                <video
-                  class="video"
-                  width="480"
-                  height="360"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/video-banner-3.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="card-banner" style="grid-area: b4">
-                <video
-                  class="video"
-                  width="360"
-                  height="640"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/video-banner-4.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="card-banner" style="grid-area: b5">
-                <video
-                  class="video"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/video-banner-5.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="card-banner" style="grid-area: b6">
-                <video
-                  class="video"
-                  width="480"
-                  height="360"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/video-banner-6.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-          </div>
-
-          <!-- TERTIARY CARD -->
-          <div class="banner-card tertiary">
-            <div class="card-content">
-              <h3 class="headline-medium card-title">
-                Premium media, top collections!
-              </h3>
-
-              <p class="body-large card-text">
-                Uncover captivating visuals: stunning images, captivating
-                videos.
-              </p>
-
-              <a
-                href="./pages/photos/photos.html"
-                class="btn btn-tertiary"
-                data-ripple
-              >
-                <span class="label-large text">Explore Now</span>
-
-                <div class="state-layer"></div>
-              </a>
-            </div>
-
-            <div class="card-grid">
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b1;
-                  background-image: url(./assets/images/collection-banner-1.jpg);
-                "
-              ></div>
-
-              <div class="card-banner" style="grid-area: b2">
-                <video
-                  class="video"
-                  width="360"
-                  height="420"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/collection-banner-2.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b3;
-                  background-image: url(./assets/images/collection-banner-3.jpg);
-                "
-              ></div>
-
-              <div
-                class="card-banner"
-                style="
-                  grid-area: b4;
-                  background-image: url(./assets/images/collection-banner-4.jpg);
-                "
-              ></div>
-
-              <div class="card-banner" style="grid-area: b5">
-                <video
-                  class="video"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/collection-banner-5.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-
-              <div class="card-banner" style="grid-area: b6">
-                <video
-                  class="video"
-                  width="640"
-                  height="338"
-                  loading="lazy"
-                  autoplay
-                  muted
-                  loop
-                >
-                  <source
-                    src="./assets/videos/collection-banner-6.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </section>
 

@@ -29,7 +29,7 @@ class PexelsClient {
 
       // Check if the response is not OK
       if (!res.ok) {
-        throw new Error(`Request failed with status ${response.status}`);
+        throw new Error(`Request failed with status ${res.status}`);
       }
 
       const data = await res.json();
