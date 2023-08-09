@@ -9,7 +9,7 @@ class PexelsClient {
    * @param {string} API_KEY - Your Pexels API key.
    */
   constructor(API_KEY) {
-    this.API_KEY = API_KEY;
+    this.API_KEY = process.env.API_KEY;
     this.root = {
       default: 'https://api.pexels.com/v1/',
       videos: 'https://api.pexels.com/videos/',
