@@ -117,4 +117,4 @@ class PexelsClient {
   }
 }
 
-export default new PexelsClient(API_KEY);
+export default new PexelsClient(process.env.API_KEY);
