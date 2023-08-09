@@ -1,6 +1,6 @@
 'use strict';
 
-import { API_KEY } from '../utils/API_KEY.js';
+// import { API_KEY } from '../utils/API_KEY.js';
 import { urlEncode } from '../utils/urlEncode.js';
 
 class PexelsClient {
